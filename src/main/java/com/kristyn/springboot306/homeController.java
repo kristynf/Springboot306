@@ -10,6 +10,7 @@ import java.util.Set;
 
 @Controller
 public class homeController {
+
     @Autowired
     DirectorRepository directorRepository;
 
@@ -25,6 +26,8 @@ public class homeController {
         movie.setDescription("About Stars...");
         Set<Movie> movies = new HashSet<>();
         movies.add(movie);
+
+        movie = new Movie();
 
         movie.setTitle("DeathStar Ewoks");
         movie.setYear(2011);
