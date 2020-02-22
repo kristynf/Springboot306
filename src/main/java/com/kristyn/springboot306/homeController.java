@@ -14,7 +14,7 @@ public class homeController {
     DirectorRepository directorRepository;
 
     @RequestMapping("/")
-    public String index(Model model){
+    public String index(Model model) {
         Director director = new Director();
         director.setName("Stephen Bullock");
         director.setGenre("Sci Fi");
@@ -23,9 +23,15 @@ public class homeController {
         movie.setTitle("Star Movie");
         movie.setYear(2017);
         movie.setDescription("About Stars...");
-
         Set<Movie> movies = new HashSet<>();
         movies.add(movie);
+
+        movie.setTitle("DeathStar Ewoks");
+        movie.setYear(2011);
+        movie.setDescription("About Ewoks on the DeathStar...");
+        movies.add(movie);
+
+
 
         director.setMovies(movies);
 

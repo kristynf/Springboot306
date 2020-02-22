@@ -11,8 +11,9 @@
     <h6 th:inline="text">specializing in [[${director.genre}]]</h6>
 
     <ul>
-        <th:block th:each="movie : ${director.movie}">
-            <li th:inline="text"><b>[[${movie.title}]]</b></li>
+        <th:block th:each="movie : ${director.movies}">
+            <li th:inline="text"><b>[[${movie.title}]]</b> released in
+                [[${movie.year}]].</li>
         </th:block>
     </ul>
 </div>
